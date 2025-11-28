@@ -1,4 +1,4 @@
-import { Badge, Button } from "amvasdev-ui";
+import { Badge } from "amvasdev-ui";
 import {
   ExternalLink,
   Github,
@@ -7,6 +7,7 @@ import {
   Server,
   TrendingUp,
 } from "lucide-react";
+import ButtonLink from "../ButtonLink";
 import type { Project } from "@/data/projects";
 
 interface ProjectCardProps {
@@ -125,8 +126,8 @@ export default function ProjectCard({
         {/* Action Buttons */}
         <div className="flex gap-2">
           {demoUrl ? (
-            <Button
-              id={`project-demo-${title.toLowerCase().replace(/\s+/g, "-")}`}
+            <ButtonLink
+              href={demoUrl}
               variant="primary"
               size="sm"
               className="flex items-center gap-1"
@@ -134,11 +135,11 @@ export default function ProjectCard({
             >
               <ExternalLink className="size-3" />
               Demo
-            </Button>
+            </ButtonLink>
           ) : null}
           {githubUrl ? (
-            <Button
-              id={`project-code-${title.toLowerCase().replace(/\s+/g, "-")}`}
+            <ButtonLink
+              href={githubUrl}
               variant="ghost"
               size="sm"
               className="flex items-center gap-1"
@@ -146,7 +147,7 @@ export default function ProjectCard({
             >
               <Github className="size-3" />
               Code
-            </Button>
+            </ButtonLink>
           ) : null}
         </div>
       </div>

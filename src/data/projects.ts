@@ -26,6 +26,7 @@ export const PROJECTS: Project[] = [
     status: "Completed",
     image: "/api/placeholder/600/400",
     demoUrl: "http://yieldrate.amauryvasquez.com/",
+    githubUrl: "https://github.com/Amaury-Vasquez/yieldrate",
     featured: true,
     impact: "Simplifies fixed-income investment analysis",
   },
@@ -49,5 +50,6 @@ export const PROJECTS: Project[] = [
     demoUrl: "http://ui.amauryvasquez.com/",
     featured: true,
     impact: "Powers multiple production applications",
+    githubUrl: "https://github.com/Amaury-Vasquez/amvasdev-ui",
   },
 ];
