@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Amaury Vasquez - Personal Website
+
+A modern Next.js website built with TypeScript, Tailwind CSS, and the amvasdev-ui component library.
+
+## Tech Stack
+
+- **Framework**: Next.js 15.4.5 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4 + daisyUI themes
+- **UI Components**: amvasdev-ui component library
+- **Icons**: Lucide React
+- **Development**: Turbopack for fast development builds
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build the project for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint with custom import rules
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                 # Next.js App Router pages
+│   ├── layout.tsx      # Root layout with amvasdev-ui CSS imports
+│   └── page.tsx        # Home page
+└── modules/            # Feature-based modules
+    ├── Home/           # Home page components
+    └── About/          # About page components
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Component Library
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project uses the `amvasdev-ui` component library with:
+- 14 predefined daisyUI themes
+- Modern React components with TypeScript support
+- Comprehensive component usage guide in `claude/COMPONENT_USAGE_GUIDE.md`
 
-## Deploy on Vercel
+## Development Guidelines
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Follow the configured ESLint rules for import ordering
+- Use standard Tailwind CSS classes (no prefix required)
+- Refer to component usage guide for amvasdev-ui best practices
+- Maintain TypeScript strict typing throughout the project
